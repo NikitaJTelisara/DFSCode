@@ -1,13 +1,6 @@
 import java.util.ArrayList;
 import java.util.Stack;
-
-/**
- * Created with IntelliJ IDEA.
- * User: NT030798
- * Date: 1/25/17
- * Time: 11:33 AM
- * To change this template use File | Settings | File Templates.
- */
+ 
 public class DepthFirstSearch {
     /*
     40------>20->50
