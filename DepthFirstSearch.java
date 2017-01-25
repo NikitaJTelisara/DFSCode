@@ -39,7 +39,7 @@ public class DepthFirstSearch {
         Node n7 = new Node(70);
         nodes.add(n7);
 
-        // array = 40 10 20 30 60 50 70
+        // arrayList = 40 10 20 30 60 50 70
 
         int[][] adjacentNodes = {
                 {0, 1, 1, 0, 0, 0, 0},  // Node 1: 40
@@ -94,7 +94,7 @@ public class DepthFirstSearch {
             System.out.println(element.data);
             ArrayList<Node> neighbours = findNeighbours(m, element, nodes);
             for (int i = 0; i < neighbours.size(); i++) {
-                Node n1 = (Node) neighbours.get(i);
+                Node n1 = neighbours.get(i);
                 if (n1 != null && !n1.visited) {
                     stack.push(n1);
                     n1.visited = true;
@@ -109,7 +109,7 @@ public class DepthFirstSearch {
         System.out.println(n.data);
         ArrayList<Node> neighbours = findNeighbours(m, n, nodes);
         for (int i = 0; i < neighbours.size(); i++) {
-            Node element = (Node) neighbours.get(i);
+            Node element = neighbours.get(i);
             if (n != null && !element.visited) {
                 recursiveDfs(element, m, nodes);
             }
@@ -119,7 +119,7 @@ public class DepthFirstSearch {
     //clear Flags
     public static void clearFlags(ArrayList<Node> nodes) {
         for (int i = 0; i < nodes.size(); i++) {
-            Node n = (Node) nodes.get(i);
+            Node n = nodes.get(i);
             if (n.visited) {
                 n.visited = false;
             }
