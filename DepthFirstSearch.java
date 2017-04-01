@@ -103,7 +103,7 @@ public class DepthFirstSearch {
         ArrayList<Node> neighbours = findNeighbours(m, n, nodes);
         for (int i = 0; i < neighbours.size(); i++) {
             Node element = neighbours.get(i);
-            if (n != null && !element.visited) {
+            if (element != null && !element.visited) {
                 recursiveDfs(element, m, nodes);
             }
         }
