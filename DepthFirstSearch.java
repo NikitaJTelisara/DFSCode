@@ -65,6 +65,7 @@ public class DepthFirstSearch {
                 nodeIndex = i;
             }
         }
+        // better to get nodeIndex int nodeIndex = nodes.indexOf(n);
         if (nodeIndex != -1) {
             for (int j = 0; j < m[0].length; j++) {
                 if (m[nodeIndex][j] == 1) {
